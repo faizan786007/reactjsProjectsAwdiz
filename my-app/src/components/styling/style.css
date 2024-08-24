@@ -7,6 +7,7 @@
 }
 .parent h1 {
 	cursor: pointer;
+	font-size: 0.5rem;
 }
 .counter {
 	display: flex;
@@ -14,9 +15,25 @@
 	align-items: center;
 }
 .btn {
-	padding: 10px 30px;
-	font-size: 1.5rem;
+	padding: 10px 20px;
+	font-size: 1rem;
 	background-color: yellow;
 	border: none;
-	margin: 10px;
+	margin: 5px;
+}
+.pos {
+	position: relative;
+	top: -130px;
+	right: -299px;
+	padding: 10px;
+	border: 3px solid red;
+	font-weight: 700;
+}
+.pos1 {
+	position: relative;
+	top: -268px;
+	right: -299px;
+	padding: 10px;
+	border: 3px solid red;
+	font-weight: 700;
 }

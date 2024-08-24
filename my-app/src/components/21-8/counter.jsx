@@ -10,6 +10,9 @@ function Counter() {
 		if (count <= 0) return;
 		setCount(count - 1);
 	}
+	function reset() {
+		setCount(0);
+	}
 	return (
 		<div className="counter">
 			<button className="btn" onClick={dec}>
@@ -18,6 +21,9 @@ function Counter() {
 			<h2>Counter : {count}</h2>
 			<button className="btn" onClick={inc}>
 				+
+			</button>
+			<button className="btn" onClick={reset}>
+				Reset
 			</button>
 		</div>
 	);
