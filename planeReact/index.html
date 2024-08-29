@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>React App</title>
+
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        let f=12
+        function ftoc(f){
+           return (f-32) * 5/9  
+        }
+        let no=[1,2,3,4,5,6]
+        let obj={name:"ali",age:"25"}
+        let cars=["bmw","maruti","honda","audi"]
+        return (
+          <>
+         
+          <p>Temperature in fahrenheit: {f}</p>
+          <p>Temperature in celsius: { ftoc(f)}</p>
+          <p>{no}</p>
+          <p>{obj.name}</p>
+          {no.map(n=><h1 key={n}>{n}</h1>)}
+          <p>filter</p>
+          {no.filter(n=>n%2==0).map(n=><h1 key={n}>{n}</h1>)}
+          <p>unoreder list</p>
+          <ul>{cars.map(c=><li>{c}</li>)}</ul> 
+          </>
+        );
+      };
+
+      const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+      rootElement.render(<App />);
+    </script>
+
+  </body>
+</html>

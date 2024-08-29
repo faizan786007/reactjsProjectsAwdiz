@@ -8,7 +8,29 @@ import UseEffect1 from "./components/23-8/useEffect-1";
 import UseEffect2 from "./components/23-8/useEffect-2";
 import UseEffect3 from "./components/23-8/useEffect-3";
 import UseEffect4 from "./components/23-8/useEffect-4";
+import UseParams from "./components/24-8/useParams";
+import PropDrilling from "./components/24-8/PropDrilling";
+import { useState } from "react";
+import Mapping from "./components/24-8/mapping";
+import Mapping2 from "./components/24-8/mapping2";
+import Todo from "./components/25-8/todo";
+import DynamicStyle from "./components/29-8/DynamicStyle";
+import Register from "./components/29-8/Register";
 function App() {
+	const [counter, setCounter] = useState(0);
+	const [students, setStudent] = useState([
+		"Purva",
+		"Vinay",
+		"Manav",
+		"aman",
+		"Chandana",
+	]);
+	function inc() {
+		setCounter(counter + 1);
+	}
+	function dec() {
+		setCounter(counter - 1);
+	}
 	return (
 		<div>
 			<Nav />
@@ -21,6 +43,27 @@ function App() {
 				<Route path="/useEffect2" element={<UseEffect2 />} />
 				<Route path="/useEffect3" element={<UseEffect3 />} />
 				<Route path="/useEffect4" element={<UseEffect4 />} />
+				<Route path="/useParams/:id" element={<UseParams />} />
+				<Route
+					path="/propDrilling"
+					element={
+						<PropDrilling
+							students={["ali", "swaraj", "awdiz"]}
+							isCompleted={true}
+							counter={counter}
+							inc={inc}
+							dec={dec}
+						/>
+					}
+				/>
+				<Route
+					path="/mapping"
+					element={<Mapping students={students} setStudent={setStudent} />}
+				/>
+				<Route path="/mapping2" element={<Mapping2 />} />
+				<Route path="/todo" element={<Todo />} />
+				<Route path="/dynamicStyle" element={<DynamicStyle />} />
+				<Route path="/register" element={<Register />} />
 			</Routes>
 		</div>
 	);
