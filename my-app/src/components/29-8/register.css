@@ -9,7 +9,7 @@
 
 form {
 	background-color: #fff;
-	padding: 20px;
+	padding: 5px;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	max-width: 400px;
@@ -19,7 +19,7 @@ form {
 label {
 	display: block;
 	font-weight: bold;
-	margin-bottom: 5px;
+	margin-bottom: 1px;
 	color: #333;
 }
 
@@ -28,7 +28,7 @@ input[type="email"],
 input[type="password"] {
 	width: 100%;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 2px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-sizing: border-box;
@@ -67,4 +67,10 @@ input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
 	font-size: 12px;
+}
+.error {
+	color: red; /* Makes the text red to indicate an error */
+	font-size: 14px; /* Slightly smaller font size for the error message */
+	margin-top: -2px; /* Adds some space between the input field and the error message */
+	font-weight: bold; /* Makes the error message bold */
 }

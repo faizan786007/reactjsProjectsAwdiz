@@ -16,6 +16,9 @@ import Mapping2 from "./components/24-8/mapping2";
 import Todo from "./components/25-8/todo";
 import DynamicStyle from "./components/29-8/DynamicStyle";
 import Register from "./components/29-8/Register";
+import RegistrationValidation from "./components/31-8/registrationVlidation";
+import UseEffectRegistration from "./components/31-8/UseEffectRegistration";
+import Reducer from "./components/1-9/reducer";
 function App() {
 	const [counter, setCounter] = useState(0);
 	const [students, setStudent] = useState([
@@ -64,6 +67,15 @@ function App() {
 				<Route path="/todo" element={<Todo />} />
 				<Route path="/dynamicStyle" element={<DynamicStyle />} />
 				<Route path="/register" element={<Register />} />
+				<Route
+					path="/registrationValidation"
+					element={<RegistrationValidation />}
+				/>
+				<Route
+					path="/useEffectRegistration"
+					element={<UseEffectRegistration />}
+				/>
+				<Route path="/reducer" element={<Reducer />} />
 			</Routes>
 		</div>
 	);

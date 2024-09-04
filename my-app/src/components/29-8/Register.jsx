@@ -11,6 +11,12 @@ const Register = () => {
 	console.log(user, "user");
 	function handleSubmit(e) {
 		e.preventDefault();
+		Setuser({
+			name: "",
+			email: "",
+			password: "",
+			confirmPassword: "",
+		});
 	}
 	function handleChange(e) {
 		const { name, value } = e.target;
@@ -57,7 +63,7 @@ const Register = () => {
 				<input
 					type="password"
 					placeholder="type your password.."
-					value={user.confirmPasswordpassword}
+					value={user.confirmPassword}
 					name="confirmPassword"
 					onChange={handleChange}
 				/>
