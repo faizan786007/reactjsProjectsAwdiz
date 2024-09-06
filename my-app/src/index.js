@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import AuthContextComponent from "./components/context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -34,7 +35,9 @@ root.render(
 					},
 				}}
 			/>
-			<App />
+			<AuthContextComponent>
+				<App />
+			</AuthContextComponent>
 		</BrowserRouter>
 	</React.StrictMode>
 );
