@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import AuthContextComponent from "./components/context/AuthContext";
+import ColorContextParent from "./components/5-9/Colorcontext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -35,9 +36,11 @@ root.render(
 					},
 				}}
 			/>
-			<AuthContextComponent>
-				<App />
-			</AuthContextComponent>
+			<ColorContextParent>
+				<AuthContextComponent>
+					<App />
+				</AuthContextComponent>
+			</ColorContextParent>
 		</BrowserRouter>
 	</React.StrictMode>
 );

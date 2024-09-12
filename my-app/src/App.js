@@ -19,6 +19,7 @@ import Register from "./components/29-8/Register";
 import RegistrationValidation from "./components/31-8/registrationVlidation";
 import UseEffectRegistration from "./components/31-8/UseEffectRegistration";
 import Reducer from "./components/1-9/reducer";
+import NewLogin from "./components/5-9/NewLogin";
 function App() {
 	const [counter, setCounter] = useState(0);
 	const [students, setStudent] = useState([
@@ -76,6 +77,7 @@ function App() {
 					element={<UseEffectRegistration />}
 				/>
 				<Route path="/reducer" element={<Reducer />} />
+				<Route path="/newLogin" element={<NewLogin />} />
 			</Routes>
 		</div>
 	);
