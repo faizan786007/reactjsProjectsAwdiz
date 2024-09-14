@@ -23,15 +23,19 @@ function Nav() {
 	function UseEffect4() {
 		navigate("/useEffect4");
 	}
+	function handleProducts() {
+		navigate("/product");
+	}
 	return (
 		<div className="parent">
 			<h1 onClick={handleHome}>Home</h1>
 			<h1 onClick={handleLogin}>Login</h1>
 			<h1 onClick={handleCounter}>Counter</h1>
-			<h1 onClick={UseEffect1}>UseEffect-1</h1>
+			{/* <h1 onClick={UseEffect1}>UseEffect-1</h1>
 			<h1 onClick={UseEffect2}>UseEffect-2</h1>
 			<h1 onClick={UseEffect3}>UseEffect-3</h1>
-			<h1 onClick={UseEffect4}>UseEffect-4</h1>
+			<h1 onClick={UseEffect4}>UseEffect-4</h1> */}
+			<h1 onClick={handleProducts}>products</h1>
 		</div>
 	);
 }
