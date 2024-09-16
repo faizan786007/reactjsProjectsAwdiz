@@ -6,9 +6,13 @@ const Product = () => {
 	const [products, setProducts] = useState([]);
 	async function getAllProducts() {
 		toast("products page..");
-		const response = await axios.get("https://fakestoreapi.com/products");
-		// console.log("response", response.data);
-		setProducts(response.data);
+		try {
+			const response = await axios.get("https://fakestoreapi.com/products");
+			// console.log("response", response.data);
+			setProducts(response.data);
+		} catch (error) {
+			toast.error(error);
+		}
 	}
 	// useEffect(() => {
 	// 	getAllProducts();
