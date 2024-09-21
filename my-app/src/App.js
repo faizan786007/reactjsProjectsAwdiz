@@ -22,6 +22,7 @@ import Reducer from "./components/1-9/reducer";
 import NewLogin from "./components/5-9/NewLogin";
 import Product from "./components/14-9/Product";
 import UseReference from "./components/15-9/UseReference";
+import ReduxCounter from "./components/19-9/ReduxCounter";
 function App() {
 	const [counter, setCounter] = useState(0);
 	const [students, setStudent] = useState([
@@ -82,6 +83,7 @@ function App() {
 				<Route path="/newLogin" element={<NewLogin />} />
 				<Route path="/product" element={<Product />} />
 				<Route path="/useReference" element={<UseReference />} />
+				<Route path="/reduxcounter" element={<ReduxCounter />} />
 			</Routes>
 		</div>
 	);
