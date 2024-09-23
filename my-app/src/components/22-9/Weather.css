@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+	margin: 0;
+	font-family: "Arial", sans-serif;
+	background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+	color: #333;
+}
+
+/* Container */
+.weather-app {
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 30px;
+	background-color: #ffffff;
+	border-radius: 15px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	transition: transform 0.3s;
+}
+
+.weather-app:hover {
+	transform: translateY(-5px);
+}
+
+/* Header */
+h1 {
+	font-size: 2.8em;
+	margin-bottom: 20px;
+	color: #0056b3;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Section */
+.weather-app-input {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.weather-app-input input {
+	flex: 1;
+	padding: 12px;
+	font-size: 1.2em;
+	border: 2px solid #007bff;
+	border-radius: 8px;
+	margin-right: 10px;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.weather-app-input input:focus {
+	outline: none;
+	border-color: #0056b3;
+	box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+}
+
+.weather-app-input button {
+	padding: 12px 18px;
+	font-size: 1.2em;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+.weather-app-input button:hover {
+	background-color: #0056b3;
+	transform: scale(1.05);
+}
+
+/* Loader and Error Display */
+.loader {
+	color: #007bff;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.error-display {
+	color: red;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+/* Current Weather Section */
+.current-weather {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: #f8f9fa;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather p {
+	margin: 10px 0;
+	font-size: 1.1em;
+}
+
+/* Image */
+.image {
+	margin: 15px 0;
+}
+
+.image img {
+	width: 120px;
+	height: auto;
+}
+
+/* Forecast Section */
+.forecast-of-day {
+	margin-top: 20px;
+	background-color: #e9ecef;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-of-day p {
+	margin: 5px 0;
+	font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+	.weather-app-input {
+		flex-direction: column;
+	}
+
+	.weather-app-input input {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.weather-app-input button {
+		width: 100%;
+	}
+}
+/* .forecast-container {
+	display: flex;
+	justify-content: space-around;
+}
+.left p,
+.right p {
+	color: rgb(84, 74, 74);
+	font-size: 1.2rem;
+	font-size: medium;
+	font-weight: bolder;
+} */
+.forecast-container {
+	display: flex;
+	justify-content: space-between; /* Changed to space-between for better spacing */
+	align-items: center; /* Centers items vertically */
+	padding: 15px;
+	margin: 10px 0;
+	background-color: #ffffff; /* Light background */
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.forecast-container:hover {
+	background-color: #f9f9f9; /* Light grey on hover */
+}
+
+.left p,
+.right p {
+	color: rgb(84, 74, 74); /* Text color */
+	font-size: 1.2rem; /* Font size */
+	font-weight: bolder; /* Bold text */
+	margin: 0; /* Remove default margin */
+}
+
+.left {
+	flex: 1; /* Allow left section to grow */
+}
+
+.right {
+	flex: 1; /* Allow right section to grow */
+	text-align: right; /* Align text to the right */
+}
+
+/* Optional: Add some responsiveness */
+@media (max-width: 600px) {
+	.forecast-container {
+		flex-direction: column; /* Stack items vertically on small screens */
+		align-items: flex-start; /* Align items to the start */
+	}
+	.right {
+		text-align: left; /* Align right section to the left */
+	}
+}
+.displayer {
+	font-size: 1.5rem; /* Larger font size for emphasis */
+	font-weight: bold; /* Make the text bold */
+	color: #4a4a4a; /* A darker grey color */
+	text-align: center; /* Center the text */
+	margin: 20px 0; /* Add some vertical spacing */
+	padding: 15px; /* Add padding for better readability */
+	border: 2px dashed #007bff; /* Dashed border for visual interest */
+	border-radius: 10px; /* Rounded corners */
+	background-color: #e9f7ff; /* Light blue background */
+	transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.displayer:hover {
+	background-color: #b3e5fc; /* Darker blue on hover */
+}
+.errordisplay {
+	font-size: 1.4rem; /* Slightly larger font for emphasis */
+	font-weight: bold; /* Bold text for visibility */
+	color: #ff4c4c; /* Bright red color for error indication */
+	background-color: #ffe6e6; /* Light red background */
+	border: 2px solid #ff4c4c; /* Solid red border */
+	border-radius: 5px; /* Rounded corners */
+	padding: 15px; /* Padding for better readability */
+	text-align: center; /* Center the text */
+	margin: 20px 0; /* Vertical spacing around the message */
+	transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.errordisplay:hover {
+	background-color: #ffb3b3; /* Darker shade on hover */
+	border-color: #ff1a1a; /* Darker border on hover */
+}
