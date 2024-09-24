@@ -1,0 +1,26 @@
+.input-category {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.drop-down-list {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-right: 10px;
+	background-color: #fff; /* White background */
+	transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+/* Change border color on focus */
+.drop-down-list:focus {
+	border-color: #007bff; /* Change this color to your preference */
+	outline: none; /* Remove default outline */
+}
+.datee {
+	padding: 0px 5px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	color: #786d6d;
+}

@@ -25,6 +25,7 @@ import UseReference from "./components/15-9/UseReference";
 import ReduxCounter from "./components/19-9/ReduxCounter";
 import TodoRedux from "./components/19-9new/TodoRedux";
 import WeatherApp from "./components/22-9/WeatherApp";
+import NewsApp from "./components/23-9/NewsApp";
 function App() {
 	const [counter, setCounter] = useState(0);
 	const [students, setStudent] = useState([
@@ -88,6 +89,7 @@ function App() {
 				<Route path="/reduxcounter" element={<ReduxCounter />} />
 				<Route path="/todoredux" element={<TodoRedux />} />
 				<Route path="/weatherapp" element={<WeatherApp />} />
+				<Route path="/newsapp" element={<NewsApp />} />
 			</Routes>
 		</div>
 	);
